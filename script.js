@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterGenre = document.getElementById('filterGenre');
     const bookList = document.getElementById('bookList');
 
-    // Updated JSON data with specific book names and images
     const booksData = [
         {"bookId": 1, "bookName": "Seven Secrets Of Shiva", "author": "Devdutt Pattanaik", "price": 499, "quantity": 7, "genre": "Fantasy", "image": "https://images.unsplash.com/photo-1526293542304-0afdf63016d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2V2ZW4lMjBzZWNyZXRzJTIwb2YlMjBzaGl2YXxlbnwwfHwwfHx8MA%3D%3D"},
         {"bookId": 2, "bookName": "Seven Secrets Of Vishnu", "author": "Devdutt Pattanaik", "price": 299, "quantity": 5, "genre": "Fantasy", "image": "https://plus.unsplash.com/premium_photo-1693238777087-bc36ece2e413?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2V2ZW4lMjBzZWNyZXRzJTIwb2YlMjB2aXNobnV8ZW58MHx8MHx8fDA%3D"},
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {"bookId": 10, "bookName": "Hangman", "author": " Jack Heath", "price": 399, "quantity": 2, "genre": "Mystery", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbWd09ZSS5UelE1QjRobs0FA2ufJ68hu_1iA&s"}
     ];
 
-    // Debounce function to limit the rate at which a function can fire
     function debounce(func, wait) {
         let timeout;
         return function(...args) {
@@ -26,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // Display books
     function displayBooks(books) {
         bookList.innerHTML = '';
         books.forEach(book => {
@@ -46,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Populate filter options
     function populateFilterOptions(books) {
         const genres = [...new Set(books.map(book => book.genre))];
         filterGenre.innerHTML += genres.map(genre => `
@@ -61,25 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300));
     }
 
-    // Filter books by genre
     function fetchBooksByGenre(genres) {
         const filteredBooks = booksData.filter(book => genres.length === 0 || genres.includes(book.genre));
         displayBooks(filteredBooks);
     }
 
-    // Search functionality
     searchBar.addEventListener('input', debounce(() => {
         const query = searchBar.value.toLowerCase();
         fetchBooksByQuery(query);
     }, 300));
 
-    // Filter books by search query
     function fetchBooksByQuery(query) {
         const filteredBooks = booksData.filter(book => book.bookName.toLowerCase().includes(query));
         displayBooks(filteredBooks);
     }
 
-    // Initialize the display with all books and filter options
     displayBooks(booksData);
     populateFilterOptions(booksData);
 });

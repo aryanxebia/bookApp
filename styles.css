@@ -1,11 +1,10 @@
-/* Global reset and box-sizing */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Body styling */
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
@@ -15,53 +14,57 @@ body {
     min-height: 100vh;
 }
 
-/* Header styling */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #282c34;
+    background-color: #0056b3; /* Deep blue background */
     color: #ffffff;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    margin: 0;
 }
 
-/* Sidebar (Aside) styling */
 aside {
     position: fixed;
     top: 60px;
     left: 0;
-    width: 250px;
+    width: 260px;
     padding: 20px;
     height: calc(100vh - 60px);
     overflow-y: auto;
     background-color: #ffffff;
-    border-right: 1px solid #ddd;
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid #ddd;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Centered Search Bar */
 aside input[type="text"] {
     display: block;
-    width: calc(100% - 40px); /* Adjusted to account for padding */
+    width: calc(100% - 20px); /* Adjusted to account for padding */
     margin: 0 auto 20px auto;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
-/* Filter Section Styling */
+aside input[type="text"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
 aside h3 {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.3rem;
+    color: #0056b3; 
     margin-bottom: 15px;
 }
 
@@ -69,15 +72,15 @@ aside label {
     display: block;
     font-size: 1rem;
     margin-bottom: 10px;
+    color: #333;
 }
 
 aside input[type="checkbox"] {
     margin-right: 10px;
 }
 
-/* Main content styling */
 main {
-    margin-left: 270px; /* Adjust to accommodate sidebar */
+    margin-left: 270px; 
     padding: 20px;
     margin-top: 60px;
     flex: 1;
@@ -86,7 +89,6 @@ main {
     background-color: #ffffff;
 }
 
-/* Content container styling */
 .content-container {
     max-width: 1200px;
     width: 100%;
@@ -94,18 +96,17 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     padding: 0;
-    overflow-y: auto; /* Allows vertical scrolling if needed */
-    max-height: calc(100vh - 80px); /* Adjust based on header and footer height */
+    overflow-y: auto;
+    max-height: calc(100vh - 80px); 
 }
 
-/* Book item styling */
 .book {
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 15px;
     width: 220px;
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -114,7 +115,7 @@ main {
 }
 
 .book:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-5px);
 }
 
@@ -122,34 +123,33 @@ main {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
 }
 
 .book h3 {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #0056b3; 
+    margin-bottom: 10px;
 }
 
 .book p {
     font-size: 0.9rem;
     color: #666;
+    margin-bottom: 5px;
 }
 
-/* Footer styling */
 footer {
-    background-color: #282c34;
+    background-color: #0056b3;
     color: #ffffff;
     text-align: center;
     padding: 15px;
     position: relative;
     width: 100%;
     margin-top: auto;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     aside {
         width: 100%;

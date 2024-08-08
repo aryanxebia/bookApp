@@ -5,16 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Updated JSON data with specific book names and images
     const booksData = [
-        {"bookId": 1, "bookName": "Harry Potter and the Sorcerer's Stone", "author": "J.K. Rowling", "price": 19.99, "quantity": 7, "genre": "Fantasy", "image": "https://covers.openlibrary.org/b/id/7884238-L.jpg"},
-        {"bookId": 2, "bookName": "A Game of Thrones", "author": "George R.R. Martin", "price": 29.99, "quantity": 5, "genre": "Fantasy", "image": "https://covers.openlibrary.org/b/id/8224916-L.jpg"},
-        {"bookId": 3, "bookName": "Outliers: The Story of Success", "author": "Malcolm Gladwell", "price": 14.99, "quantity": 10, "genre": "Non-Fiction", "image": "https://covers.openlibrary.org/b/id/7793200-L.jpg"},
-        {"bookId": 4, "bookName": "Sapiens: A Brief History of Humankind", "author": "Yuval Noah Harari", "price": 16.99, "quantity": 8, "genre": "History", "image": "https://covers.openlibrary.org/b/id/8096958-L.jpg"},
-        {"bookId": 5, "bookName": "A Brief History of Time", "author": "Stephen Hawking", "price": 22.99, "quantity": 6, "genre": "Science", "image": "https://covers.openlibrary.org/b/id/8307875-L.jpg"},
-        {"bookId": 6, "bookName": "The Catcher in the Rye", "author": "J.D. Salinger", "price": 18.99, "quantity": 4, "genre": "Literature", "image": "https://covers.openlibrary.org/b/id/8102430-L.jpg"},
-        {"bookId": 7, "bookName": "Pride and Prejudice", "author": "Jane Austen", "price": 12.99, "quantity": 9, "genre": "Romance", "image": "https://covers.openlibrary.org/b/id/8220846-L.jpg"},
-        {"bookId": 8, "bookName": "The Handmaid's Tale", "author": "Margaret Atwood", "price": 15.99, "quantity": 3, "genre": "Dystopian", "image": "https://covers.openlibrary.org/b/id/8220935-L.jpg"},
-        {"bookId": 9, "bookName": "The Da Vinci Code", "author": "Dan Brown", "price": 17.99, "quantity": 12, "genre": "Thriller", "image": "https://covers.openlibrary.org/b/id/7888214-L.jpg"},
-        {"bookId": 10, "bookName": "Murder on the Orient Express", "author": "Agatha Christie", "price": 13.99, "quantity": 2, "genre": "Mystery", "image": "https://covers.openlibrary.org/b/id/7875166-L.jpg"}
+        {"bookId": 1, "bookName": "Seven Secrets Of Shiva", "author": "Devdutt Pattanaik", "price": 499, "quantity": 7, "genre": "Fantasy", "image": "https://images.unsplash.com/photo-1526293542304-0afdf63016d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2V2ZW4lMjBzZWNyZXRzJTIwb2YlMjBzaGl2YXxlbnwwfHwwfHx8MA%3D%3D"},
+        {"bookId": 2, "bookName": "Seven Secrets Of Vishnu", "author": "Devdutt Pattanaik", "price": 299, "quantity": 5, "genre": "Fantasy", "image": "https://plus.unsplash.com/premium_photo-1693238777087-bc36ece2e413?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2V2ZW4lMjBzZWNyZXRzJTIwb2YlMjB2aXNobnV8ZW58MHx8MHx8fDA%3D"},
+        {"bookId": 3, "bookName": "Crime And Punishment", "author": "Fyodor Doestoevsky", "price": 1499, "quantity": 10, "genre": "Literature", "image": "https://images.unsplash.com/photo-1604533983460-44d5b3c7f4bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3JpbWUlMjBhbmQlMjBwdW5pc2htZW50fGVufDB8fDB8fHww"},
+        {"bookId": 4, "bookName": "Notes From Underground", "author": "Fyodor Doestoevsky", "price": 1699, "quantity": 8, "genre": "History", "image": "https://images.unsplash.com/photo-1554228243-ff1759819ed3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bm90ZXMlMjBmcm9tJTIwdW5kZXJncm91bmR8ZW58MHx8MHx8fDA%3D"},
+        {"bookId": 5, "bookName": "The Kite Runner", "author": "Khaled Hossini", "price": 299, "quantity": 6, "genre": "Fiction", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTROJAMN4uAcmyjer0P9MkkELcSvtnYovCdQ&s"},
+        {"bookId": 6, "bookName": "The Song Of Achilles", "author": "Madeline Miller", "price": 199, "quantity": 4, "genre": "Literature", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL72mZLotjuvOol-rqCULru5D_OC3_TxPrTQ&s"},
+        {"bookId": 7, "bookName": "Palace Of Illusions", "author": " Chitra Banerjee Divakaruni", "price": 199, "quantity": 9, "genre": "Romance", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPk_NK9-iY5BRZ58jhER4My1ztWF4CjvFlXQ&s"},
+        {"bookId": 8, "bookName": "The Silent Patient", "author": "Alex Michaelides", "price": 599, "quantity": 3, "genre": "Dystopian", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqHWW1F9ORdPpFwMraO7lsyOVLlMKtNN77Cw&s"},
+        {"bookId": 9, "bookName": "The Seven Deaths of Evelyn Hardcastle", "author": "Stuart Turton", "price": 199, "quantity": 12, "genre": "Thriller", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4krwR4-g04aYzqhJX6cBpJ8_YKZVoeFfWxA&s"},
+        {"bookId": 10, "bookName": "Hangman", "author": " Jack Heath", "price": 399, "quantity": 2, "genre": "Mystery", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbWd09ZSS5UelE1QjRobs0FA2ufJ68hu_1iA&s"}
     ];
 
     // Debounce function to limit the rate at which a function can fire

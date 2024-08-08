@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div>
                     <h3>${book.bookName}</h3>
                     <p>Author: ${book.author}</p>
-                    <p>Price: $${book.price.toFixed(2)}</p>
+                    <p>Price: ₹${book.price.toFixed(2)}</p>
                     <p>Quantity: ${book.quantity}</p>
                     <p>Genre: ${book.genre}</p>
                 </div>

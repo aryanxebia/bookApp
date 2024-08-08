@@ -1,0 +1,12 @@
+[
+    {"bookId": 1, "author": "Author A", "price": 10.99, "quantity": 5, "genre": "Fiction", "image": "https://source.unsplash.com/random/100x100?sig=1"},
+    {"bookId": 2, "author": "Author B", "price": 12.99, "quantity": 3, "genre": "Non-Fiction", "image": "https://source.unsplash.com/random/100x100?sig=2"},
+    {"bookId": 3, "author": "Author C", "price": 8.99, "quantity": 10, "genre": "Science", "image": "https://source.unsplash.com/random/100x100?sig=3"},
+    {"bookId": 4, "author": "Author D", "price": 15.99, "quantity": 7, "genre": "Math", "image": "https://source.unsplash.com/random/100x100?sig=4"},
+    {"bookId": 5, "author": "Author E", "price": 9.99, "quantity": 8, "genre": "Technology", "image": "https://source.unsplash.com/random/100x100?sig=5"},
+    {"bookId": 6, "author": "Author F", "price": 14.99, "quantity": 4, "genre": "History", "image": "https://source.unsplash.com/random/100x100?sig=6"},
+    {"bookId": 7, "author": "Author G", "price": 11.99, "quantity": 6, "genre": "Literature", "image": "https://source.unsplash.com/random/100x100?sig=7"},
+    {"bookId": 8, "author": "Author H", "price": 13.99, "quantity": 2, "genre": "Biography", "image": "https://source.unsplash.com/random/100x100?sig=8"},
+    {"bookId": 9, "author": "Author I", "price": 7.99, "quantity": 12, "genre": "Philosophy", "image": "https://source.unsplash.com/random/100x100?sig=9"},
+    {"bookId": 10, "author": "Author J", "price": 18.99, "quantity": 1, "genre": "Psychology", "image": "https://source.unsplash.com/random/100x100?sig=10"}
+]
